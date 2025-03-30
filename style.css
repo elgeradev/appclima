@@ -81,3 +81,10 @@ justify-self: center;
 
     width: 50%;
 }
+
+@media (max-width: 600px) {
+    #map {
+        width: 90%; /* Reduce el tamaño en celulares */
+        height: 250px;
+    }
+}
