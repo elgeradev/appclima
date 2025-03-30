@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciòn de Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgU5BwWISpmAJ-uoIptw4VjIcsm02rwpQ&callback=initMap&libraries=places" async defer></script>
+   
+
+</head>
+<body>
+    
+  <div class="contenedor">
+
+<h1> Aplicación del Clima</h1>
+<input type="text" id="ciudadEntrada" placeholder="Ingrese una ciudad">
+<button id="botonBusqueda">Buscar</button>
+
+</div>
+
+
+<div id="datosClima" class="datosClima">
+<img id="weather-icon" src="" alt="Weather Icon">
+</div>
+
+
+    <div id="map"> </div>
+  
+    <script src="./script.js"> </script>
+</body>
+
+
+</html>
