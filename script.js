@@ -67,21 +67,26 @@ function mostrarDatosClima(data) {
     const temperatura = Math.round (data.main.temp - diferencia);
     const descripcion = data.weather[0].description;
     const icono = data.weather[0].icon;
-    const ciudadTitulo = document.createElement ("h2")
+    const humedad=data.main.humidity;
+    const humedadInfo=document.createElement("p")
+     const ciudadTitulo = document.createElement ("h2")
     ciudadTitulo.textContent=ciudadNombre;
     const temperaturaInfo   = document.createElement("p")
     temperaturaInfo.textContent =`La temperatura actual en ${ciudadNombre} es de: ${temperatura} grados Centigrados`
     const descripcionInfo = document.createElement ("p")
-    descripcionInfo.textContent=`Y  ${descripcion}`;
+    humedadInfo.textContent=`La Humedad es de: ${humedad}%`;
+    descripcionInfo.textContent=`La descripcion meteorologica es:  ${descripcion}`;
     descripcionInfo.className="descripcion"
     temperaturaInfo.className="temperatura"
     const imagen=document.createElement("img");
     imagen.src=`https://openweathermap.org/img/wn/${icono}@4x.png`;
     document.getElementById("datosClima").appendChild(ciudadTitulo)
     document.getElementById("datosClima").appendChild(temperaturaInfo)
+    document.getElementById("datosClima").appendChild(humedadInfo);
     document.getElementById("datosClima").appendChild(descripcionInfo)
-    document.getElementById("datosClima").appendChild(imagen);
+        document.getElementById("datosClima").appendChild(imagen);
     decir(temperaturaInfo.textContent);
+    decir(humedadInfo.textContent);
     decir(descripcionInfo.textContent);
   
 
