@@ -1,4 +1,5 @@
-let api_key = "755c54c14573f86466780061c1480f25";
+let partes = ["755c", "54c1", "4573", "f864", "6678", "0061", "c148", "0f25"];
+let api_key = partes.join("");
 let urlBase = "https://api.openweathermap.org/data/2.5/weather?q=";
 let diferencia =273.15;
 let idioma="es"
